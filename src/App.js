@@ -87,7 +87,9 @@ const App = () => {
   }
 
   const onSearch = () => {
-    setFilteredUserData((prevUsers) => prevUsers.filter((user) => user.name.toLowerCase().includes(searchValue.toLowerCase())));
+    if(searchValue) {
+      setFilteredUserData((prevUsers) => prevUsers.filter((user) => user.name.toLowerCase().includes(searchValue.toLowerCase())));
+    }
   }
 
   const onClear = () => {
