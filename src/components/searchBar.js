@@ -48,7 +48,7 @@ const SearchBar = ({ searchValue, onChangeSearchValue, onSearch, onClear }) => (
       onChange={(e) => onChangeSearchValue(e.target.value)}
       placeholder='Search'
     />
-    <Button onClick={onSearch}>Search</Button>
+    <Button disabled={!searchValue} onClick={onSearch}>Search</Button>
     <ClearButton onClick={onClear}>Clear</ClearButton>
   </SearchContainer>
 );
